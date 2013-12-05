@@ -3,6 +3,8 @@
 Chrome DevTools panel with
 [color-pusher](https://github.com/bahmutov/color-pusher) widget.
 
+![Screenshot](docs/color-pusher-chrome.png)
+
 ## Related
 
 Initial code layout inspired by

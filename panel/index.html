@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-csp ng-app="color-pusher">
   <head>
     <title>color-pusher</title>
-    <!--
+    <link href="libs/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/color-pusher.css" rel="stylesheet" />
     <link href="app.css" rel="stylesheet" />
-    <script src="libs/socket.io.js"></script>
-    <script src="libs/term.js"></script>
-    <script src="app.js"></script>
-    -->
+
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/angular.js"></script>
+    <script src="libs/color-pusher.js"></script>
   </head>
   <body>
-    This will be <em>color-pusher</em>
+    <color-pusher></color-pusher>
   </body>
 </html>
