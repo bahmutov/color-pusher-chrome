@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "color-pusher",
+  "version": "0.0.0",
+  "author": "Gleb Bahmutov",
+  "description": "Live color pushing as Chrome DevTools panel",
+  "devtools_page": "devtools.html",
+  "permissions": [
+  ],
+  "optional_permissions": [
+  ],
+  "icons": {
+    "128": "icons/app-icon-128.png",
+    "64": "icons/app-icon-64.png",
+    "48": "icons/app-icon-48.png",
+    "32": "icons/app-icon-32.png",
+    "16": "icons/app-icon-16.png"
+  },
+  "background":{
+    "scripts":[
+      "background.js"
+    ]
+  },
+  "app":{
+    "launch": {
+      "local_path": "panel/index.html"
+    }
+  }
+}
