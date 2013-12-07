@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "author": "Gleb Bahmutov",
   "description": "Live color pushing as Chrome DevTools panel",
-  "devtools_page": "devtools.html",
   "permissions": [
-    "activeTab"
+    "activeTab", "tabs"
   ],
   "optional_permissions": [
   ],
@@ -17,6 +16,7 @@
     "32": "icons/app-icon-32.png",
     "16": "icons/app-icon-16.png"
   },
+  "devtools_page": "devtools.html",
   "background":{
     "scripts":[
       "background.js"
@@ -26,5 +26,14 @@
     "launch": {
       "local_path": "panel/index.html"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "panel/libs/jquery.js",
+        "content-script/content.js"
+      ]
+    }
+  ]
 }

@@ -9,7 +9,7 @@ chrome.devtools.panels.create("color-pusher",
     });
 
     port.onMessage.addListener(function (message) {
-      console.log('got message from background page', message);
+      console.log('devtools got message from background page', message);
     });
 
     panel.onShown.addListener(function once(panelWindow) {
