@@ -1,8 +1,26 @@
 chrome.devtools.panels.create("color-pusher",
   "icons/panel-icon.png",
   "panel/index.html",
-  function(panel) {
-    var backgroundPageConnection = chrome.runtime.connect({
-      name: "devtools-page"
+  function (panel) {
+    var _window;
+
+    var port = chrome.runtime.connect({
+      name: "color-pusher"
     });
+
+    port.onMessage.addListener(function (message) {
+      console.log('got message from background page', message);
+    });
+
+    panel.onShown.addListener(function once(panelWindow) {
+      panel.onShown.removeListener(once);
+      _window = panelWindow;
+      _window.respond = function (name, data) {
+        console.log('got message from panel', name, data);
+        chrome.runtime.sendMessage({
+          name: "apply-colors",
+          css: data
+        });
+      }
+    })
   });

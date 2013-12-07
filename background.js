@@ -1,20 +1,19 @@
-chrome.runtime.onConnect.addListener(function(port) {
+chrome.extension.onConnect.addListener(function (port) {
+  alert('connection ' + JSON.stringify(port, null, 2));
+
   if (port.name != "color-pusher") {
     return;
   }
 
-  port.onDisconnect.addListener(function(port) {
+  port.onDisconnect.addListener(function (port) {
   });
 
   port.onMessage.addListener(function (message) {
-    chrome.tabs.getCurrent(function (tab) {
-      if (!tab) {
-        return;
-      }
+    alert('got message ' + JSON.stringify(message, null, 2));
+    console.log('got message', message);
 
-      chrome.tabs.executeScript({
-        code: 'document.body.style.backgroundColor="red"'
-      });
+    chrome.tabs.executeScript({
+      code: 'alert("something");'
     });
   });
 });
