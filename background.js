@@ -1,16 +1,30 @@
-var openCount = 0;
-chrome.runtime.onConnect.addListener(function(port) {
-  if (port.name == "devtools-page") {
-    if (openCount == 0) {
-      // alert("DevTools window opening.");
-    }
-    openCount++;
+var lastTabId = -1;
+function sendMessage(msg) {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    lastTabId = tabs[0].id;
+    console.log('sending msg to', tabs[0]);
+    chrome.tabs.sendMessage(lastTabId, msg);
+  });
+}
 
-    port.onDisconnect.addListener(function(port) {
-        openCount--;
-        if (openCount == 0) {
-          // alert("Last DevTools window closing.");
-        }
+var colorPusherContentPort;
+
+chrome.extension.onConnect.addListener(function (port) {
+  console.log('connection', port);
+
+  if (port.name != 'color-pusher' &&
+    port.name != 'color-pusher-content') {
+    return;
+  }
+
+  if (port.name === 'color-pusher-content') {
+    colorPusherContentPort = port;
+  } else {
+    port.onMessage.addListener(function (message) {
+      console.log('got message from panel', message);
+      if (colorPusherContentPort) {
+        colorPusherContentPort.postMessage(message);
+      }
     });
   }
 });

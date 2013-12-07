@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
   "name": "color-pusher",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Gleb Bahmutov",
   "description": "Live color pushing as Chrome DevTools panel",
-  "devtools_page": "devtools.html",
   "permissions": [
+    "activeTab", "tabs",
+    "http://www.colourlovers.com/*"
   ],
   "optional_permissions": [
   ],
@@ -16,6 +17,7 @@
     "32": "icons/app-icon-32.png",
     "16": "icons/app-icon-16.png"
   },
+  "devtools_page": "devtools.html",
   "background":{
     "scripts":[
       "background.js"
@@ -25,5 +27,14 @@
     "launch": {
       "local_path": "panel/index.html"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "panel/libs/jquery.js",
+        "content-script/content.js"
+      ]
+    }
+  ]
 }
