@@ -6,10 +6,7 @@
   "description": "Live color pushing as Chrome DevTools panel",
   "devtools_page": "devtools.html",
   "permissions": [
-    "activeTab",
-    "tabs",
-    "http://*/*",
-    "https://*/"
+    "activeTab"
   ],
   "optional_permissions": [
   ],

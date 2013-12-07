@@ -15,12 +15,12 @@ chrome.devtools.panels.create("color-pusher",
     panel.onShown.addListener(function once(panelWindow) {
       panel.onShown.removeListener(once);
       _window = panelWindow;
+
       _window.respond = function (name, data) {
         console.log('got message from panel', name, data);
-        chrome.runtime.sendMessage({
-          name: "apply-colors",
-          css: data
-        });
+        if (name === 'apply-colors') {
+          port.postMessage(data);
+        }
       }
     })
   });
