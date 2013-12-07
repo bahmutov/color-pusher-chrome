@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-csp ng-app="color-pusher">
+<html ng-csp ng-app="color-pusher-panel">
   <head>
     <title>color-pusher</title>
     <link href="libs/bootstrap.min.css" rel="stylesheet" />
@@ -10,8 +10,10 @@
     <script src="libs/bootstrap.min.js"></script>
     <script src="libs/angular.js"></script>
     <script src="libs/color-pusher.js"></script>
+
+    <script src="color-pusher-panel.js"></script>
   </head>
-  <body>
+  <body ng-controller="color-pusher-ctrl">
     <color-pusher></color-pusher>
   </body>
 </html>
