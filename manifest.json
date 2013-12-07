@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
   "name": "color-pusher",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Gleb Bahmutov",
   "description": "Live color pushing as Chrome DevTools panel",
   "permissions": [
-    "activeTab", "tabs"
+    "activeTab", "tabs",
+    "http://www.colourlovers.com/*"
   ],
   "optional_permissions": [
   ],
