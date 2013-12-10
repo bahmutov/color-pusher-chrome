@@ -5,9 +5,6 @@
   "author": "Gleb Bahmutov",
   "description": "Easy color theme tweaking for any website as Chrome DevTools panel",
   "permissions": [
-    "activeTab",
-    "tabs",
-    "http://www.colourlovers.com/*"
   ],
   "optional_permissions": [
   ],
@@ -24,12 +21,6 @@
   "background": {
     "scripts": ["background.js"]
   },
-  "app":{
-    "launch": {
-      "local_path": "panel/index.html"
-    }
-  },
-  "content_scripts": "scripts injected into all pages, used to actually set colors",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
