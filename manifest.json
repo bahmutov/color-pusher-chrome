@@ -18,23 +18,24 @@
     "32": "icons/app-icon-32.png",
     "16": "icons/app-icon-16.png"
   },
+  "devtools_page": "dummy page with single goal: load devtools.js",
   "devtools_page": "devtools.html",
-  "background":{
-    "scripts":[
-      "background.js"
-    ]
+  "background": "singleton script running in the 'background' for this extesion",
+  "background": {
+    "scripts": ["background.js"]
   },
   "app":{
     "launch": {
       "local_path": "panel/index.html"
     }
   },
+  "content_scripts": "scripts injected into all pages, used to actually set colors",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": [
         "panel/libs/jquery.js",
-        "content-script/content.js"
+        "content-script/color-pusher-injected-into-page.js"
       ]
     }
   ]
