@@ -5,7 +5,9 @@
   "author": "Gleb Bahmutov",
   "description": "Live color pushing as Chrome DevTools panel",
   "permissions": [
-    "activeTab", "tabs"
+    "activeTab",
+    "tabs",
+    "http://www.colourlovers.com/*"
   ],
   "optional_permissions": [
   ],
@@ -35,6 +37,5 @@
         "content-script/content.js"
       ]
     }
-  ],
-  "content_security_policy": "script-src 'self' https://www.colourlovers.com; object-src 'self' https://www.colourlovers.com"
+  ]
 }

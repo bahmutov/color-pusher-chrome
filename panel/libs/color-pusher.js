@@ -2813,6 +2813,15 @@ angular.module("widget.tpl.html", []).run(["$templateCache", function($templateC
         }
       };
       $http.jsonp(url, options)
+      /*
+      var options = {
+        url: url,
+        params: {
+          format: 'json'
+        }
+      };
+      $http.get(url, options)
+      */
       .success(function (data) {
         if (!data[0]) {
           alertify.error('Undefined palette returned for id ' + $scope.paletteId);
