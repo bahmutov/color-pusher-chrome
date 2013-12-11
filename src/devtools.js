@@ -1,11 +1,11 @@
-chrome.devtools.panels.create("color-pusher",
-  "icons/panel-icon.png",
-  "panel/index.html",
-  function (panel) {
+chrome.devtools.panels.create('color-pusher', 'icons/panel-icon.png',
+  'panel/index.html', colorPusherPanel);
+
+function colorPusherPanel(panel) {
     var _window;
 
     var port = chrome.runtime.connect({
-      name: "color-pusher"
+      name: 'color-pusher'
     });
 
     port.onMessage.addListener(function (message) {
@@ -21,6 +21,6 @@ chrome.devtools.panels.create("color-pusher",
         if (name === 'apply-colors') {
           port.postMessage(data);
         }
-      }
-    })
-  });
+      };
+    });
+  }

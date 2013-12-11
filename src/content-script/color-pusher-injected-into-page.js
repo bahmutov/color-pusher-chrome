@@ -1,5 +1,5 @@
 var port = chrome.runtime.connect({
-  name: "color-pusher-content"
+  name: 'color-pusher-content'
 });
 
 port.onMessage.addListener(function (message) {

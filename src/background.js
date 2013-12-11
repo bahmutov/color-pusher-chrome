@@ -1,11 +1,17 @@
+/*
 var lastTabId = -1;
 function sendMessage(msg) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  var currentTab = {
+    active: true,
+    currentWindow: true
+  };
+  chrome.tabs.query(currentTab, function (tabs) {
     lastTabId = tabs[0].id;
     console.log('sending msg to', tabs[0]);
     chrome.tabs.sendMessage(lastTabId, msg);
   });
 }
+*/
 
 var colorPusherContentPort;
 
