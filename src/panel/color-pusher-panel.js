@@ -11,6 +11,8 @@
         JSON.stringify(colors, null, 2));
 
       window.respond('apply-colors', colors);
+
+      ga('send', 'event', 'button', 'click', 'apply-colors', 1);
     });
   }
 }(angular));

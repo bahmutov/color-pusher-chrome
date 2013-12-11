@@ -92,8 +92,8 @@ module.exports = function (grunt) {
     sync: {
       all: {
         options: {
-          // sync specific options
-          sync: ['author', 'description', 'name', 'version', 'private', 'license'],
+          // sync only these options
+          sync: ['author', 'description', 'name', 'version'],
           from: 'package.json',
           to: 'src/manifest.json'
         }

@@ -69,5 +69,5 @@
     "passfail"      : false,
     "white"         : true,
 
-    "predef"        : ["angular", "chrome", "check"]
+    "predef"        : ["angular", "chrome", "check", "ga"]
 }
