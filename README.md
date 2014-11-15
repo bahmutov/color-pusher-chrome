@@ -3,8 +3,6 @@
 Chrome DevTools panel with
 [color-pusher](https://github.com/bahmutov/color-pusher) widget.
 
-[![NPM][color-pusher-chrome-icon] ][color-pusher-chrome-url]
-
 [![Build status][color-pusher-chrome-ci-image] ][color-pusher-chrome-ci-url]
 [![dependencies][color-pusher-chrome-dependencies-image] ][color-pusher-chrome-dependencies-url]
 [![devdependencies][color-pusher-chrome-devdependencies-image] ][color-pusher-chrome-devdependencies-url]
@@ -56,8 +54,6 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[color-pusher-chrome-icon]: https://nodei.co/npm/color-pusher-chrome.png?downloads=true
-[color-pusher-chrome-url]: https://npmjs.org/package/color-pusher-chrome
 [color-pusher-chrome-ci-image]: https://travis-ci.org/bahmutov/color-pusher-chrome.png?branch=master
 [color-pusher-chrome-ci-url]: https://travis-ci.org/bahmutov/color-pusher-chrome
 [color-pusher-chrome-dependencies-image]: https://david-dm.org/bahmutov/color-pusher-chrome.png
