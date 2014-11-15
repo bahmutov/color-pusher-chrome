@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "aged": "0.0.1",
-    "grunt": "0.4.2",
+    "grunt": "0.4.5",
     "grunt-banner": "0.2.3",
     "grunt-complexity": "0.1.3",
     "grunt-contrib-clean": "0.6.0",
