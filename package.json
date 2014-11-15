@@ -1,7 +1,7 @@
 {
   "name": "color-pusher",
   "description": "Easy color theme tweaking for any website as Chrome DevTools panel",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Gleb Bahmutov gleb.bahmutov@gmail.com",
   "bugs": {
     "url": "https://github.com/bahmutov/color-pusher-chrome/issues"
