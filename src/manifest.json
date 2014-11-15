@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "color-pusher",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Gleb Bahmutov gleb.bahmutov@gmail.com",
   "description": "Easy color theme tweaking for any website as Chrome DevTools panel",
   "permissions": [],
